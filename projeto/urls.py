@@ -1,14 +1,8 @@
 from django.contrib import admin
-from django.http import HttpResponse
-from django.urls import path
-
-
-# HttpResponse é a resposta ao request
-def my_view(request):
-    return HttpResponse("Olá")
-
+from django.urls import include, path
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("sobre/", my_view),
+    path('admin/', admin.site.urls),
+    path('', include('recipes.urls')),
+    path('reipes/', include('recipes.urls')),
 ]
