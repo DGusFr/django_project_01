@@ -101,7 +101,7 @@
             background: var(--color-primary-dark);
         }
 
-        .main_logo {
+        .main-logo {
             font-size: 4rem;
             color: var(--color-white);
             text-decoration: none;
@@ -161,6 +161,19 @@
 
         .search-form:focus-within .search-button {
             color: var(--color-primary);
+        }
+
+        .main-content {
+            /*Para fazer o grid:*/
+            padding-top: 0;
+        }
+
+        .main-content-list {
+            display: grid;
+            /*Para deixar o tamplate responsivo:*/
+            /*repeat (repetir), minmax (min=340px) se n couber 340px usar 1fragmento inteiro */
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: var(--spacing-gutter-large);
         }
     </style>
 
