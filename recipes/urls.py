@@ -8,5 +8,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     # <int:id> usamos para notificar qual receita queremos impimir
     # o int serve para permitir apenas numeros no link
+    path('recipes/category/<int:category_id>/',
+         views.category, name="category"),
     path('recipes/<int:id>/', views.recipe, name="recipe"),
 ]
